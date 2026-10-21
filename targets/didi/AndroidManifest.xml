@@ -1,0 +1,3223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="1208001605"
+    android:versionName="8.0.16"
+    android:compileSdkVersion="35"
+    android:compileSdkVersionCodename="15"
+    package="com.sdu.didi.psnger"
+    platformBuildVersionCode="35"
+    platformBuildVersionName="15">
+    <uses-sdk
+        android:minSdkVersion="24"
+        android:targetSdkVersion="35"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data
+                android:mimeType="vnd.android.cursor.item/*"
+                android:scheme="content"
+                android:host="com.android.contacts"/>
+        </intent>
+        <package android:name="com.tencent.qqmusic"/>
+        <package android:name="com.autonavi.minimap"/>
+        <package android:name="com.baidu.BaiduMap"/>
+        <package android:name="com.tencent.map"/>
+        <package android:name="com.tencent.mm"/>
+        <package android:name="com.eg.android.AlipayGphone"/>
+        <package android:name="cmb.pb"/>
+        <package android:name="com.unionpay"/>
+        <package android:name="cn.gov.pbc.dcep"/>
+        <package android:name="com.tencent.mobileqq"/>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE"/>
+        </intent>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.GET_CONTENT"/>
+            <data android:mimeType="image/*"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.PICK"/>
+            <data android:mimeType="image/*"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.CHOOSER"/>
+        </intent>
+        <intent>
+            <action android:name="com.hihonor.push.action.BIND_PUSH_SERVICE"/>
+        </intent>
+        <package android:name="cn.cyberIdentity.certification"/>
+        <intent>
+            <action android:name="android.intent.action.SENDTO"/>
+            <data android:scheme="*"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.PICK"/>
+        </intent>
+        <package android:name="com.whatsapp"/>
+        <package android:name="com.google.android.gms"/>
+        <package android:name="com.android.vending"/>
+        <package android:name="com.google.android.youtube"/>
+        <package android:name="com.google.android.googlequicksearchbox"/>
+        <package android:name="com.google.android.apps.maps"/>
+        <package android:name="com.google.android.gm"/>
+        <package android:name="com.google.android.apps.photos"/>
+        <package android:name="com.google.android.apps.youtube.music"/>
+        <package android:name="com.google.android.contacts"/>
+        <package android:name="com.google.android.calendar"/>
+        <package android:name="com.facebook.katana"/>
+        <package android:name="com.instagram.android"/>
+        <package android:name="com.zhiliaoapp.musically"/>
+        <package android:name="com.snapchat.android"/>
+        <package android:name="com.facebook.orca"/>
+        <package android:name="com.spotify.music"/>
+        <package android:name="com.netflix.mediaclient"/>
+        <intent>
+            <action android:name="androidx.camera.extensions.action.VENDOR_ACTION"/>
+        </intent>
+        <package android:name="com.huawei.arengine.service"/>
+        <intent>
+            <action android:name="com.huawei.hms.core.aidlservice"/>
+        </intent>
+        <intent>
+            <action android:name="com.huawei.hms.core"/>
+        </intent>
+        <intent>
+            <action android:name="*"/>
+            <data android:scheme="tbopen"/>
+        </intent>
+        <package android:name="com.eg.android.AlipayGphoneRC"/>
+        <package android:name="hk.alipay.wallet"/>
+        <package android:name="hk.alipay.walletRC"/>
+        <package android:name="com.android.creator"/>
+        <package android:name="com.zhuoyi.security.lite"/>
+        <package android:name="com.freeme.secureguard"/>
+        <package android:name="com.android.secureguard"/>
+        <package android:name="com.mdid.msa"/>
+        <package android:name="com.samsung.android.deviceidservice"/>
+        <package android:name="com.coolpad.deviceidsupport"/>
+        <package android:name="com.heytap.openid"/>
+        <package android:name="com.qiku.id"/>
+    </queries>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <permission
+        android:name="com.sdu.didi.psnger.permission.bh.notification"
+        android:protectionLevel="signatureOrSystem"/>
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN"
+        android:maxSdkVersion="30"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30"/>
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE"/>
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"/>
+    <uses-permission android:name="com.samsung.android.app.sreminder.permission.NOW_BAR_PROVIDER"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="com.android.permission.GET_INSTALLED_APPS"/>
+    <uses-permission android:name="android.permision.TURN_SCREEN_ON"/>
+    <uses-permission android:name="android.permission.DETECT_SCREEN_CAPTURE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE"/>
+    <uses-permission android:name="com.didi.passenger.sdk.login.permission.broadcast.com.sdu.didi.psnger"/>
+    <permission
+        android:label="access permission"
+        android:name="com.didi.passenger.sdk.login.permission.broadcast.com.sdu.didi.psnger"
+        android:protectionLevel="signature"/>
+    <permission
+        android:name="getui.permission.GetuiService.com.sdu.didi.psnger"
+        android:protectionLevel="normal"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-feature android:name="android.hardware.camera.any"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true"/>
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="true"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT"/>
+    <permission
+        android:name="com.sdu.didi.psnger.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.sdu.didi.psnger.permission.MIPUSH_RECEIVE"/>
+    <uses-permission android:name="com.hihonor.brain.permission.KIT_SERVICE_ACCESS"/>
+    <uses-permission android:name="android.permission.TURN_SCREEN_ON"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE"/>
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.screen.landscape"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false"/>
+    <uses-permission android:name="com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-feature android:glEsVersion="0x20000"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"/>
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="false"/>
+    <uses-permission android:name="com.xiaomi.security.permission.ACCESS_XSOF"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <permission
+        android:name="com.sdu.didi.psnger.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.sdu.didi.psnger.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.hardware.nfc.hce"/>
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <permission
+        android:name="com.sdu.didi.psnger.permission.PROCESS_PUSH_MSG"
+        android:protectionLevel="signature"/>
+    <permission
+        android:name="com.sdu.didi.psnger.permission.PUSH_PROVIDER"
+        android:protectionLevel="signature"/>
+    <permission
+        android:name="com.sdu.didi.psnger.permission.PUSH_WRITE_PROVIDER"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.sdu.didi.psnger.permission.PROCESS_PUSH_MSG"/>
+    <uses-permission android:name="com.sdu.didi.psnger.permission.PUSH_PROVIDER"/>
+    <uses-permission android:name="com.vivo.aiengine.permission.BIND_INTENTION_PLUS_SERVICE"/>
+    <supports-screens
+        android:anyDensity="true"
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:resizeable="true"/>
+    <uses-permission android:name="com.asus.msa.SupplementaryDID.ACCESS"/>
+    <uses-permission android:name="freemme.permission.msa"/>
+    <uses-permission android:name="freemme.permission.msa.SECURITY_ACCESS"/>
+    <uses-permission android:name="oplus.permission.settings.LAUNCH_FOR_EXPORT"/>
+    <uses-permission android:name="com.vivo.identifier.permission.OAID_STATE_DIALOG"/>
+    <uses-permission android:name="com.nemu.oaid.permission.read"/>
+    <uses-permission android:name="com.nemu.oaid.permission.write"/>
+    <uses-permission android:name="com.hihonor.push.permission.READ_PUSH_NOTIFICATION_INFO"/>
+    <application
+        android:theme="@style/fixedName_res_0x7f12012b"
+        android:label="@string/fixedName_res_0x7f1109d6"
+        android:icon="@drawable/ic_product_launcher"
+        android:name="com.didi.sdk.app.DIDIApplication"
+        android:allowBackup="false"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:extractNativeLibs="true"
+        android:fullBackupContent="@xml/fixedName_res_0x7f140004"
+        android:usesCleartextTraffic="true"
+        android:resizeableActivity="false"
+        android:networkSecurityConfig="@xml/fixedName_res_0x7f140011"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:requestLegacyExternalStorage="true">
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false"/>
+        <meta-data
+            android:name="build_channel"
+            android:value=""/>
+        <meta-data
+            android:name="issue"
+            android:value="8.0.16.26101420461302"/>
+        <meta-data
+            android:name="origin_id"
+            android:value="1"/>
+        <meta-data
+            android:name="build_type"
+            android:value="release"/>
+        <meta-data
+            android:name="build_task"
+            android:value=""/>
+        <meta-data
+            android:name="release_mode"
+            android:value="true"/>
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1201eb"
+            android:label="@string/fixedName_res_0x7f1109d6"
+            android:icon="@drawable/ic_product_launcher"
+            android:name="com.didi.sdk.app.launch.LauncherActivity"
+            android:process=":privacy"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12017c"
+            android:label="@string/fixedName_res_0x7f1109d6"
+            android:icon="@drawable/ic_product_launcher"
+            android:name="com.didi.sdk.app.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|mnc|mcc"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="com.didi.home"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data
+                    android:scheme="onetravel"
+                    android:host="bike"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.didi.sdk.pay.QQPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:configChanges="orientation"/>
+        <activity-alias
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.sdu.didi.psnger.wxapi.QQPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:targetActivity="com.didi.sdk.pay.QQPayEntryActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="qwalletpay100884080"/>
+            </intent-filter>
+        </activity-alias>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.didi.sdk.pay.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:configChanges="orientation"/>
+        <activity-alias
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.sdu.didi.psnger.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:targetActivity="com.didi.sdk.pay.WXPayEntryActivity"/>
+        <provider
+            android:name="com.facebook.internal.FacebookInitProvider"
+            android:enabled="false"
+            android:exported="false"
+            android:authorities="com.sdu.didi.psnger.FacebookInitProvider"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12027a"
+            android:name="com.didi.passenger.daijia.driverservice.hummer.ui.base.DJHummerContainerActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboard"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120199"
+            android:name="com.didi.passenger.daijia.driverservice.hummer.ui.webview.DJHummerWebActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.didi.passenger.daijia.debug.DDriveDebugConfigActivity"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120199"
+            android:name="com.didi.passenger.daijia.driverservice.ui.activity.DriverServiceWebActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120199"
+            android:name="com.didi.passenger.daijia.driverservice.ui.activity.DDriveFeeRuleWebActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120199"
+            android:name="com.didi.passenger.daijia.driverservice.ui.activity.DDriveWebActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.didi.passenger.daijia.debug.DDriveDebugEvnConfigActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120468"
+            android:name="com.didi.quattro.business.inservice.lockscreen.ui.QULockScreenActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120473"
+            android:name="com.didi.quattro.business.endservice.cashier.activity.QUCostObjectionWebActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120199"
+            android:name="com.didi.quattro.business.endservice.cashier.activity.DDCreditSignActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120199"
+            android:name="com.didi.quattro.business.endservice.cashier.activity.QUCancelTripSelectReasonActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:name="com.didi.quattro.common.moreoperation.activity.SuspendCarpoolWebActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120199"
+            android:name="com.didi.quattro.common.moreoperation.activity.CancelTripConfirmWebActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120199"
+            android:name="com.didi.quattro.common.createorder.helper.page.QUCreateOrderInterceptWebActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.didi.quattro.common.moreoperation.activity.PrePayEntranceActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc"/>
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:name="com.didi.quattro.common.secondfloor.view.SecondFloorWebActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120472"
+            android:name="com.didi.quattro.common.webtab.QUStationGuidanceActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.didi.quattro.common.casperservice.QUCasperActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.didi.quattro.common.bridge.QUTransparentAddressActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:configChanges="fontScale|screenSize|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc"/>
+        <activity
+            android:name="com.didi.quattro.debug.QURnEnvActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.didi.quattro.debug.QUSKActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.didi.voyager.robotaxi.foundation.thirdsdk.qqmusic.RTQQMusicCallbackActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="onetravel"
+                    android:host="autodrivingnew"
+                    android:pathPrefix="/qqmusic_callback"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.didi.ride.ui.activity.RideHomeEntranceActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:noHistory="true"/>
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:name="com.didi.bike.ammox.biz.webview.BikeWebActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc"
+            android:windowSoftInputMode="adjustResize"
+            android:hardwareAccelerated="true"/>
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:name="com.didi.bike.ui.activity.scan.BikeScanActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="report_repair_new"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120126"
+            android:name="com.didi.ride.dimina.DMActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:name="com.didi.ride.ui.activity.RideScanResultActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12014c"
+            android:name="com.didiglobal.express.dimina.FreightDiminaContainerActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation"
+            android:windowSoftInputMode="adjustUnspecified"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12014c"
+            android:name="com.didiglobal.express.top.customer.FreightTopDiminaContainerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation"
+            android:windowSoftInputMode="adjustUnspecified"/>
+        <activity
+            android:name="com.didiglobal.express.debug.FreightCommonActivity"
+            android:exported="false"/>
+        <receiver
+            android:name="com.didiglobal.express.dimina.shortcut.reveiver.ShortCutReceiver"
+            android:exported="false"/>
+        <activity android:name="com.didi.carhailing.operation.OperationWebActivity"/>
+        <activity
+            android:name="com.didi.bus.app.debug.debugmode.DGADebugCenterActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|screenSize|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc">
+            <intent-filter>
+                <action android:name="com.didi.bus.gongjiao.debug"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <receiver
+            android:name="com.didi.bus.info.shortcut.reveiver.ShortCutReceiver"
+            android:exported="false"/>
+        <service
+            android:name="com.didi.bus.info.util.service.BusForegroundService"
+            android:foregroundServiceType="location"/>
+        <provider
+            android:name="com.didi.assistant.common.navigation.AssistantPushInitializer"
+            android:exported="false"
+            android:authorities="com.sdu.didi.psnger.assistant.push.initializer"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.didi.sfcar.foundation.widget.SFCTransparentActivity"
+            android:launchMode="singleTop"
+            android:configChanges="fontScale|screenSize|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120129"
+            android:name="com.didi.nav.driving.entrance.scheme.drouter.DRouterEntranceActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:configChanges="colorMode|screenSize|orientation|navigation|keyboardHidden|keyboard|touchscreen"/>
+        <receiver
+            android:name="com.didi.nav.driving.entrance.scheme.CancellationBroadcast"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.xiaojukeji.action.DELETE_ACCOUNT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12001e"
+            android:name="com.didi.blackhole.debug.BlackHoleDebugActivity"/>
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:name="com.didi.blackhole.container.BlackholeDimina4DiContainerActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation"
+            android:windowSoftInputMode="adjustUnspecified"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120127"
+            android:name="com.didi.drn.freight_drn.photo.PhotoSelectorActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.didi.universal.pay.onecar.view.act.UniversalPrePayActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:configChanges="fontScale|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc">
+            <intent-filter>
+                <action android:name="com.didi.universal.prepay"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.didi.pay.base.SchemeActivity"
+            android:exported="true">
+            <intent-filter>
+                <data
+                    android:scheme="diditaxi"
+                    android:host="didipay"
+                    android:path="/callback/com.sdu.didi.psnger/hummer"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.didi.pay.web.WebProxyActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.didi.pay.web.WebProxyActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.didi.pay.activity.HummerPrepayActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:configChanges="fontScale|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.didi.pay.activity.HummerNewCashierActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:configChanges="fontScale|layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|mnc|mcc"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.didi.pay.activity.HummerGeneralPayActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:configChanges="fontScale|layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|mnc|mcc"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.didi.pay.activity.HummerPayActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:configChanges="fontScale|layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|mnc|mcc"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.didi.pay.activity.HummerOneCarExternalActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:configChanges="fontScale|layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|mnc|mcc"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.didi.pay.activity.HummerOnecarPayActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:configChanges="fontScale|layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|mnc|mcc"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.didi.pay.activity.CashierTestConfigActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:configChanges="fontScale|layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|mnc|mcc"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.didi.pay.activity.CashierTestOpenCashierActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:configChanges="fontScale|layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|mnc|mcc"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120128"
+            android:name="com.didi.pay.drn.DRNPrepayActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:configChanges="fontScale|layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|mnc|mcc"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120128"
+            android:name="com.didi.pay.drn.DRNTravelActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:configChanges="fontScale|layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|mnc|mcc"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.didi.pay.activity.UniversalDispatchActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:configChanges="fontScale|layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|mnc|mcc">
+            <intent-filter>
+                <action android:name="com.didi.universal.pay"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.didi.pay.activity.AlipaySignBackActivity"
+            android:exported="true"
+            android:configChanges="orientation|keyboardHidden">
+            <intent-filter>
+                <data
+                    android:scheme="didipasnger"
+                    android:host="com.sdu.didi.psnger_financial_cashier_alipay_pay_back"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120439"
+            android:name="com.xiaojukeji.finance.halia.FinHaliaWebViewActivity"/>
+        <meta-data
+            android:name="design_width"
+            android:value="375"/>
+        <meta-data
+            android:name="design_height"
+            android:value="667"/>
+        <activity android:name="com.mfe.payment.activity.FinRouterActivity"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12014a"
+            android:name="com.xiaojukeji.finance.passenger.wallet.v4.FinWalletV4Activity"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|mnc|mcc"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120149"
+            android:name="com.xiaojukeji.finance.passenger.wallet.v4.FinWalletGuideActivity"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12014a"
+            android:name="com.xiaojukeji.finance.passenger.wallet.drn.FinDRNWalletActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|mnc|mcc"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible"
+            android:enableOnBackInvokedCallback="false"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12015b"
+            android:name="com.xiaojukeji.finance.passenger.wallet.drn.HalfWebViewActivity"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12001f"
+            android:name="com.didi.es.budgetcenter.MainActivity"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12001f"
+            android:name="com.didi.es.budgetcenter.page.BudgetCenterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12001f"
+            android:name="com.didi.es.budgetcenter.page.search.BudgetSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity
+            android:name="com.xiaojukeji.finance.mfedrn.MFEDRNContainerActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.didi.map.nav.ride.RideNavBizActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize"/>
+        <activity
+            android:name="com.didi.nav.driving.sdk.speechsquare.SpeechSquareActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="colorMode|screenSize|navigation|keyboardHidden|keyboard|touchscreen"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12027a"
+            android:name="com.didi.nav.driving.sdk.carmgr.UserCarManagerActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="colorMode|screenSize|navigation|keyboardHidden|keyboard|touchscreen"/>
+        <activity
+            android:name="com.didi.nav.driving.sdk.SelfDrivingBizActivity"
+            android:exported="false"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:configChanges="colorMode|screenSize|orientation|navigation|keyboardHidden|keyboard|touchscreen"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12028c"
+            android:name="com.didi.sdk.ui.dialog.ConfirmDialogActivity"
+            android:exported="false"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.didi.sdk.app.popup.PopupActivity"
+            android:exported="true"/>
+        <meta-data
+            android:name="android.allow_multiple_resumed_activities"
+            android:value="true"/>
+        <meta-data
+            android:name="PUSH_APPID"
+            android:value="hm1Pqrr7bMALaK1KXyb7C6"/>
+        <meta-data
+            android:name="PUSH_APPKEY"
+            android:value="Sx4MyLB65Q7oOJBGZKhLv1"/>
+        <meta-data
+            android:name="PUSH_APPSECRET"
+            android:value="2PzoSiTo7e97bWRGQAOhp"/>
+        <meta-data
+            android:name="MI_PUSH_APP_ID"
+            android:value="@string/fixedName_res_0x7f110c66"/>
+        <meta-data
+            android:name="MI_PUSH_APP_KEY"
+            android:value="@string/fixedName_res_0x7f110c67"/>
+        <meta-data
+            android:name="com.vivo.push.api_key"
+            android:value="a81219e5-5ff8-4d3b-8879-e75eaee78f08"/>
+        <meta-data
+            android:name="com.vivo.push.app_id"
+            android:value="13499"/>
+        <meta-data
+            android:name="OPPO_APP_KEY"
+            android:value="9d9HmOocoCW8OCgogwo44S4Gc"/>
+        <meta-data
+            android:name="OPPO_APP_SECRET"
+            android:value="60f417a408FF197bA7de3854b630e62D"/>
+        <meta-data
+            android:name="com.hihonor.push.app_id"
+            android:value="104414386"/>
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="appid=100200867"/>
+        <meta-data
+            android:name="Wechat.ApplicationId"
+            android:value="wx7e8eef23216bade2"/>
+        <meta-data
+            android:name="com.sdu.didi.psnger_qrscan_scheme"
+            android:value="true"/>
+        <service
+            android:name="com.didi.sdk.push.tencent.TPushService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="action_start_push_service"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.didi.sdk.download.service.OneDownLoadService"/>
+        <receiver
+            android:label="@string/fixedName_res_0x7f11011a"
+            android:name="com.didi.sdk.app.widget.UtAppWidgetProvider"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/fixedName_res_0x7f14001e"/>
+            <meta-data
+                android:name="hnwidget_category"
+                android:value="flip_sub_display"/>
+        </receiver>
+        <receiver
+            android:name="com.didi.sdk.app.widget.UtCardWidget"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="com.samsung.android.app.spage.action.CARD_UPDATE"/>
+                <action android:name="com.ut.widget.UPDATE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/fixedName_res_0x7f14001f"/>
+            <meta-data
+                android:name="oneUiWidgetRefreshInterval"
+                android:value="15000"/>
+            <meta-data
+                android:name="oneUiWidgetVersion"
+                android:value="1"/>
+        </receiver>
+        <service
+            android:name="com.didi.sdk.app.widget.UtCardDataService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false"/>
+        <activity
+            android:name="com.didi.sdk.app.launch.PolicyWebActivity"
+            android:exported="false"
+            android:process=":privacy"/>
+        <activity
+            android:name="com.didi.sdk.app.launch.ProtectorActivity"
+            android:exported="false"
+            android:process=":proctor_p"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1201eb"
+            android:name="com.didi.sdk.app.launch.splash.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|screenSize|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.didi.sdk.splash.SplashActivity"/>
+            </intent-filter>
+        </activity>
+        <activity-alias
+            android:theme="@style/fixedName_res_0x7f1201eb"
+            android:icon="@drawable/fixedName_res_0x7f080967"
+            android:name="com.didi.sdk.app.launch.splash.IconChangeAliasId1"
+            android:enabled="false"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|screenSize|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc"
+            android:targetActivity="com.didi.sdk.app.launch.splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.didi.sdk.splash.SplashActivity"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:theme="@style/fixedName_res_0x7f1201eb"
+            android:icon="@drawable/fixedName_res_0x7f080968"
+            android:name="com.didi.sdk.app.launch.splash.IconChangeAliasId2"
+            android:enabled="false"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|screenSize|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc"
+            android:targetActivity="com.didi.sdk.app.launch.splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.didi.sdk.splash.SplashActivity"/>
+            </intent-filter>
+        </activity-alias>
+        <meta-data
+            android:name="TencentMapSDK"
+            android:value="845b4b705088dd7f0b68cfc8d02196af"/>
+        <meta-data
+            android:name="TencentGeoLocationSDK"
+            android:value="xiaojukeji_passenger,KKLW3-C6XNR-YLWE7-W7652-GQAY7"/>
+        <meta-data
+            android:name="PAGE_URI_OPERATION"
+            android:value="OneTravel://operation/entrance;com.didi.sdk.business.OperationWebFragment"/>
+        <meta-data
+            android:name="PAGE_URI_WARMUP"
+            android:value="OneTravel://warmup/entrance;com.didi.sdk.business.WarmUpWebFragment"/>
+        <meta-data
+            android:name="PAGE_URI_UPGRADE"
+            android:value="OneTravel://upgrade/entrance;com.didi.sdk.business.WarmUpWebFragment"/>
+        <meta-data
+            android:name="SIDEBAR_MAKER"
+            android:value="com.didi.sdk.sidebar.Sidebar"/>
+        <meta-data
+            android:name="android.min_aspect"
+            android:value="1"/>
+        <meta-data
+            android:name="QQ.ApplicationId"
+            android:value="@string/fixedName_res_0x7f1110b1"/>
+        <meta-data
+            android:name="ALIPAY_FRIENDS.ApplicationId"
+            android:value="@string/fixedName_res_0x7f110107"/>
+        <meta-data
+            android:name="weibo.ApplicationId"
+            android:value="3120272533"/>
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/fixedName_res_0x7f110707"/>
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1201eb"
+            android:name="com.didi.sdk.app.scheme.SchemeDispatcherActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|keyboardHidden">
+            <intent-filter>
+                <data android:scheme="omega6cc519cf5f"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:scheme="geo"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:scheme="didipasnger"
+                    android:host="didi_apk_intalled_scheme"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:scheme="didipasnger"
+                    android:host="common_marketing_host"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:scheme="didipasnger"
+                    android:host="didi_apk_installed_scheme_extend"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:scheme="didipasnger"
+                    android:host="nova"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:scheme="didipasnger"
+                    android:host="alipay_sign_back"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:scheme="didipasnger"
+                    android:host="alipay_bind_back"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:scheme="didipasnger"
+                    android:host="didi_o2o_host"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="diditripcard"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:scheme="didicommon"
+                    android:host="didi_common_url"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:scheme="OneTravel"
+                    android:host="pay"
+                    android:path="/payagent_settting"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:scheme="OneTravel"
+                    android:host="pay"
+                    android:path="/payment_method"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:scheme="onetravel"
+                    android:host="oneshare"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="OneTravel"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="drn"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="onetravel"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="pushtravel"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.didi.push"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:scheme="didipasnger"
+                    android:host="alipay_pay_back"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:scheme="didipasnger"
+                    android:host="qqpay_sign_back"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <data
+                    android:scheme="onetravel"
+                    android:host="pushpage"
+                    android:path="/safety_sos"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <data
+                    android:scheme="https"
+                    android:host="v.didi.cn"
+                    android:pathPattern="/np/.*"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1201ec"
+            android:name="com.didi.sdk.sidebar.setup.mutilocale.MultiLocaleActivityImpl"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.didi.sdk.localeactivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:authorities="com.sdu.didi.psnger.com.didi.sdk.fileprovider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/fixedName_res_0x7f140009"/>
+        </provider>
+        <provider
+            android:name="com.didi.sdk.db.DIDIContentProvider"
+            android:exported="false"
+            android:authorities="com.sdu.didi.psnger.com.didi.sdk.contentprovider"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120307"
+            android:name="com.didi.frame.MainActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:label="@string/fixedName_res_0x7f111a6e"
+            android:name="com.didi.sdk.pay.sign.SignIntroActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120197"
+            android:label="@string/fixedName_res_0x7f111a6e"
+            android:name="com.didi.sdk.pay.sign.SignWebActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.didi.sdk.pay.sign.PayPalActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120197"
+            android:name="com.didi.sdk.pay.sign.CreditCardWebActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.didi.sdk.pay.sign.ZftSignWebActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.didi.sdk.webview.WebActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc">
+            <intent-filter>
+                <action android:name="didi.passenger.intent.action.WebActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity-alias
+            android:theme="@style/fixedName_res_0x7f120199"
+            android:name="com.didi.onehybrid.FusionWebActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|screenSize|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc"
+            android:targetActivity="com.didi.sdk.webview.WebActivity"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120199"
+            android:name="com.didi.sdk.webview.PassengerProxyWebActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|screenSize|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc">
+            <intent-filter>
+                <action android:name="didi.passenger.intent.action.PlatformProxyWebActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120199"
+            android:name="com.didi.sdk.fusionbridge.FusionWebActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|screenSize|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc">
+            <intent-filter>
+                <action android:name="didi.passenger.intent.action.FusionWebActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120307"
+            android:name="com.didi.sdk.webview.jsbridge.functions.image.PicUploadActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120307"
+            android:name="com.didi.sdk.webview.jsbridge.functions.image.CropActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:name="com.didi.sdk.scan.act.QrCodeScanActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:name="com.didi.sdk.scan.act.SimpleQrCodeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120199"
+            android:name="com.didi.sdk.view.picture.PicturePreviewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <service android:name="com.didi.sdk.home.FloatingService"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.alipay.sdk.app.AlipayResultActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:configChanges="fontScale|layoutDirection|density|smallestScreenSize|screenSize|screenLayout|orientation|navigation|keyboardHidden|keyboard|locale">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="@string/fixedName_res_0x7f110108"/>
+            </intent-filter>
+        </activity>
+        <service
+            android:name="com.didi.sdk.service.ForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="microphone|location"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120199"
+            android:name="com.didi.sdk.view.picture.PicSharePreviewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.didi.sdk.thanos.PassengerThanosActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout"/>
+        <activity android:name="com.didi.sdk.developermode.ApmTestActivity"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1201cc"
+            android:name="com.didi.sdk.wechatbase.WXEntryActivity"
+            android:launchMode="singleTask"/>
+        <activity-alias
+            android:theme="@style/fixedName_res_0x7f1201cc"
+            android:name="com.sdu.didi.psnger.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:targetActivity="com.didi.sdk.wechatbase.WXEntryActivity"/>
+        <activity
+            android:name="com.didi.sdk.floatwindow.FloatWebActivity"
+            android:exported="false"
+            android:taskAffinity=".taskFloat"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc"/>
+        <service
+            android:name="com.didi.sdk.service.RTCNotificationService"
+            android:exported="false"
+            android:foregroundServiceType="microphone"/>
+        <provider
+            android:name="androidx.work.impl.WorkManagerInitializer"
+            android:enabled="false"
+            android:exported="false"
+            android:multiprocess="true"
+            android:authorities="com.sdu.didi.psnger.workmanager-init"
+            android:initOrder="10"
+            android:directBootAware="false"/>
+        <service
+            android:name="com.didi.sdk.fence.huawei.HuaweiFenceService"
+            android:permission="com.huawei.hms.location.permission.PENDINGINTENT"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.huawei.hms.location.action.common.geofence"/>
+            </intent-filter>
+        </service>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12000b"
+            android:name="com.didi.bike.ammox.tech.photo.JumpPhotoActivity"/>
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:name="com.didi.bike.ammox.tech.photo.TakePhotoActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"/>
+        <provider
+            android:name="com.didi.bike.ammox.tech.photo.PhotoFileProvider"
+            android:exported="false"
+            android:authorities="com.sdu.didi.psnger.ammox.file.provider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/fixedName_res_0x7f140002"/>
+        </provider>
+        <activity
+            android:name="com.didi.unifiedPay.component.activity.SchemeActivity"
+            android:exported="true">
+            <intent-filter>
+                <data
+                    android:scheme="diditaxi"
+                    android:host="didipay"
+                    android:path="/callback"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.didi.unifiedPay.UniPrePayActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc"/>
+        <activity
+            android:name="com.didi.payment.wallet.china.web.WalletWebProxyActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.didi.payment.wallet.china.web.WalletWebProxyActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.didi.payment.wallet.china.signlist.view.activity.SignActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:configChanges="fontScale|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc">
+            <intent-filter>
+                <action android:name="com.didi.sdk.payment.sign"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120152"
+            android:name="com.didi.payment.wallet.china.wallet.view.activity.WalletMainListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|navigation|keyboardHidden">
+            <intent-filter>
+                <action android:name="com.didi.sdk.payment.newwallet"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120152"
+            android:name="com.didi.payment.wallet.china.wallet.view.activity.WalletVoucherListActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|navigation|keyboardHidden"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120152"
+            android:name="com.didi.payment.wallet.china.wallet.view.activity.WalletInsuranceListActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|navigation|keyboardHidden"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120152"
+            android:name="com.didi.payment.wallet.china.signlist.view.activity.SignListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|orientation|navigation|keyboardHidden">
+            <intent-filter>
+                <action android:name="com.didi.sdk.payment.signlist"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.didi.universal.pay.sdk.method.bankPay.SchemeActivity"
+            android:exported="true">
+            <intent-filter>
+                <data
+                    android:scheme="diditaxi"
+                    android:host="didipay"
+                    android:path="/callback/com.sdu.didi.psnger/universal"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.didi.universal.pay.sdk.web.WebProxyActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.didi.universal.pay.sdk.web.WebProxyActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120152"
+            android:name="com.didi.payment.auth.feature.verify.activity.VerifyEmptyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.didi.payment.auth.feature.verify.activity.VerifyReceiveActivity"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|keyboardHidden"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120152"
+            android:name="com.didi.payment.paymethod.creditpay.activity.CreditPayActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden">
+            <intent-filter>
+                <action android:name="com.didi.sdk.payment.creditcard"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120152"
+            android:name="com.didi.payment.paymethod.sign.channel.paypay.activity.PayPaySignWebActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120152"
+            android:name="com.didi.payment.paymethod.sign.channel.paypay.activity.PayPaySignDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120152"
+            android:name="com.didi.payment.paymethod.sign.channel.paypal.activity.PayPalSignWebActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120152"
+            android:name="com.didi.payment.paymethod.sign.channel.paypal.activity.PayPalSignDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120152"
+            android:name="com.didi.payment.creditcard.china.view.activity.CreditCardAddActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|orientation|navigation|keyboardHidden">
+            <intent-filter>
+                <action android:name="com.didi.sdk.payment.creditcard"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120152"
+            android:name="com.didi.payment.creditcard.china.view.activity.CreditCardManagerActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|orientation|navigation|keyboardHidden"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120152"
+            android:name="com.didi.payment.creditcard.china.view.activity.CreditCardAddSuccessActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|orientation|navigation|keyboardHidden"/>
+        <activity
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:name="com.didi.payment.creditcard.china.view.activity.CreditCardMpgs3DActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|orientation|navigation|keyboardHidden"/>
+        <activity
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:name="com.didi.payment.creditcard.china.view.activity.web.PayWebWithLocalDataActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|orientation|navigation|keyboardHidden"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12011d"
+            android:name="com.didi.payment.creditcard.china.unionpay.country.CreditCardCountryListActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12011d"
+            android:name="com.didi.payment.creditcard.china.unionpay.GetCvvActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12011d"
+            android:name="com.didi.payment.creditcard.china.unionpay.Auth3dsActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120275"
+            android:name="com.xiaojukeji.suitlibrary.activity.SuitProxyActivity"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120275"
+            android:name="com.suit.psnger.SuitMainActivity"
+            android:taskAffinity="com.psnger.suit"
+            android:launchMode="singleTask"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120418"
+            android:name="com.xiaojukeji.finance.dcep.DcepPayInfoActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:configChanges="fontScale|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc"/>
+        <activity
+            android:name="com.xiaojukeji.finance.dcep.DcepPayEntryActivity"
+            android:exported="true">
+            <intent-filter>
+                <data
+                    android:scheme="diditaxi"
+                    android:host="unipay"
+                    android:path="/com.sdu.didi.psnger/dcep"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12041b"
+            android:name="com.xiaojukeji.finance.dcep.DcepPayLoadingActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:configChanges="fontScale|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120418"
+            android:name="com.xiaojukeji.finance.dcep.DcepPayAuthActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:configChanges="fontScale|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1203ea"
+            android:name="com.didi.didipay.pay.activity.DidipayShowResultActivity"
+            android:launchMode="singleTop"
+            android:configChanges="fontScale|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1203ea"
+            android:name="com.didi.didipay.pay.activity.DidiFingerVerifyActivity"
+            android:launchMode="singleTop"
+            android:configChanges="fontScale|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1203ef"
+            android:name="com.didi.didipay.web.DidipayWebActivity"
+            android:launchMode="standard"
+            android:configChanges="fontScale|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1203ea"
+            android:name="com.didi.didipay.pay.activity.DidipayMainActivity"
+            android:launchMode="singleTop"
+            android:configChanges="fontScale|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1203ea"
+            android:name="com.didi.didipay.pay.activity.DidipayVerifyPwdActivity"
+            android:launchMode="singleTop"
+            android:configChanges="fontScale|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1203ef"
+            android:name="com.didi.didipay.pay.activity.DidipayVerifyProcessActivity"
+            android:launchMode="standard"
+            android:configChanges="fontScale|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12027a"
+            android:name="com.didi.cardscan.view.CardOcrScanActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent"
+            android:name="com.didi.sdk.push.vivo.VivoPushClickHandleActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="didi"
+                    android:host="vivo"
+                    android:path="/push"/>
+            </intent-filter>
+        </activity>
+        <service
+            android:name="com.vivo.push.sdk.service.CommandClientService"
+            android:permission="com.push.permission.UPSTAGESERVICE"
+            android:exported="true"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.vivo.push.sdk.LinkProxyClientActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <receiver
+            android:name="com.didi.sdk.push.vivo.VivoPushReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.vivo.pushclient.action.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.didi.sdk.push.oppo.OppoDataMessageCallbackService"
+            android:permission="com.heytap.mcs.permission.SEND_PUSH_MESSAGE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.heytap.mcs.action.RECEIVE_MCS_MESSAGE"/>
+                <action android:name="com.heytap.msp.push.RECEIVE_MCS_MESSAGE"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.didi.sdk.push.oppo.OppoCompatibleDataMessageCallbackService"
+            android:permission="com.coloros.mcs.permission.SEND_MCS_MESSAGE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.coloros.mcs.action.RECEIVE_MCS_MESSAGE"/>
+            </intent-filter>
+        </service>
+        <activity
+            android:theme="@android:style/Theme.Translucent"
+            android:name="com.didi.sdk.push.oppo.OppoPushIntentReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data
+                    android:scheme="didi"
+                    android:host="oppo"
+                    android:path="/push"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120495"
+            android:name="com.didi.voipsdk.ui.page.VoipCallActivity"
+            android:exported="true"
+            android:launchMode="singleTask"/>
+        <service
+            android:name="com.didi.voipsdk.service.KeepAliveService"
+            android:foregroundServiceType="microphone|mediaPlayback"/>
+        <receiver
+            android:name="com.didi.voipsdk.push.dedicated.VoipNotifDeletedReceiver"
+            android:exported="false"/>
+        <activity
+            android:name="com.didi.sdk.messagecenter.dispatcher.DispatchMsgActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent"
+            android:name="com.didi.sdk.push.HuaweiPushIntentReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data
+                    android:scheme="didi"
+                    android:host="huawei"
+                    android:path="/push"/>
+            </intent-filter>
+        </activity>
+        <service
+            android:name="com.didi.sdk.push.HuaweiPushService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.huawei.push.action.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver
+            android:name="com.didi.sdk.push.mi.MiPushReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.xiaomi.push.service.XMPushService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushservice"/>
+        <service
+            android:name="com.xiaomi.push.service.XMJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushservice"/>
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.PingReceiver"
+            android:exported="false"
+            android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.xiaomi.push.PING_TIMER"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name="com.didi.sdk.push.mi.MiPushIntentReceiver"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent"
+            android:name="com.didi.sdk.push.HonorPushIntentReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="didi"
+                    android:host="honor"
+                    android:path="/push"/>
+            </intent-filter>
+        </activity>
+        <service
+            android:name="com.didi.sdk.push.HonorPushService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.hihonor.push.action.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity
+            android:name="com.didi.nav.walk.WalkBizActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize"/>
+        <activity
+            android:name="com.didi.map.synctrip.departure.ui.SyncDepartureModifyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12027f"
+            android:name="com.didi.hawaii.ar.DiARNavActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12027f"
+            android:name="com.didi.hawaii.ar.core.zg.DiARZGNavActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <meta-data
+            android:name="com.google.ar.core"
+            android:value="optional"/>
+        <activity android:name="com.didi.map.turbo.didiaddressapi.AddressApiBridgeActivity"/>
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:name="com.wujie.dimina.bridge.plugin.map.OpenLocationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1202c7"
+            android:name="com.sdk.address.waypointV6.WayPointActivityV6"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1202c9"
+            android:name="com.sdk.address.address.view.PoiSelectActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1202c8"
+            android:name="com.sdk.address.address.confirm.departure.DepartureConfirmActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1202c8"
+            android:name="com.sdk.address.address.confirm.departure.MiniBusDepartureConfirmActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1202c7"
+            android:name="com.sdk.address.address.view.MiniBusShowDepartureAndDestinationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1202c7"
+            android:name="com.sdk.address.city.view.CityActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1202c7"
+            android:name="com.sdk.address.address.view.AddressActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1202c7"
+            android:name="com.sdk.address.address.view.CommonAddressActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1202c7"
+            android:name="com.sdk.address.commute.CommuteSettingsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1202c7"
+            android:name="com.sdk.address.report.ReportPoiActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1202c7"
+            android:name="com.sdk.address.station.view.StationSelectActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1202c8"
+            android:name="com.sdk.address.address.confirm.destination.MiniBusDestinationConfirmActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1202c7"
+            android:name="com.sdk.address.address.confirm.search.SearchConfirmActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1202c7"
+            android:name="com.sdk.address.address.confirm.poiconfirm.PoiSearchConfirmActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="com.xiaojukeji.action.POI_CONFIRM_PAGE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1202c8"
+            android:name="com.sdk.address.address.confirm.minibus.IntelliBusConfirmDialogActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1202c7"
+            android:name="com.didi.address.search.SearchAddressActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1202c7"
+            android:name="com.didi.address.collection.CollectionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.didi.address.fastframe.BaseActivity"/>
+        <activity
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:name="com.didi.sdk.psgroutechooser.ui.RouteChooserActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:name="com.didi.sdk.psgroutechooser.ui.debug.RouteChooserDebugCfgActivity"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120460"
+            android:name="com.didi.sdk.safety.NumberPickerActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1201ea"
+            android:name="com.didi.sdk.safety.contacter.EmergencyContacterAddActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.didi.sdk.safety.share.SafetyAutoShareTravelActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.didi.sdk.safety.onealarm.SafetyOneAlarmActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <service
+            android:name="com.didi.sdk.audiorecorder.service.multiprocess.service.MultiProcessRecordService"
+            android:exported="false"
+            android:process=":didi_recorder"/>
+        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity"/>
+        <activity
+            android:name="com.didi.drn.container.DRNActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.drn.bundle.manager.env.lock.BundleLockConfigActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.drn.bundle.manager.env.DRNBundleEnvActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1203eb"
+            android:name="com.didi.didipay.hummer.view.DidipayHummerVerifyActivity"
+            android:launchMode="singleTop"
+            android:configChanges="fontScale|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.mfe.hummer.container.activity.MFEHummerActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:configChanges="fontScale|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.mfe.hummer.container.activity.MFEHummerMaitActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:configChanges="fontScale|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.didi.payment.thirdpay.channel.qq.QQPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:configChanges="orientation"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.didi.payment.thirdpay.channel.wx.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:configChanges="orientation"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.didi.payment.thirdpay.channel.wx.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:configChanges="orientation"/>
+        <activity
+            android:name="com.didi.map.setting.sdk.MapSettingNavigationActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12027f"
+            android:name="com.didi.map.setting.sdk.MapSettingNavigationActivityV2"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.didi.map.setting.sdk.MapSettingSelectedActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.didi.map.setting.sdk.MapSettingStart"
+            android:exported="false">
+            <intent-filter>
+                <data
+                    android:scheme="dididriver"
+                    android:host="setting"
+                    android:path="/navigation"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12041d"
+            android:name="com.didi.map.setting.sdk.MapSettingWindowActivity"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12041d"
+            android:name="com.didi.map.setting.sdk.MapQuickSettingWindowActivity"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12041d"
+            android:name="com.didi.map.setting.sdk.driver.BaseDriverQuickSettingWindowActivity"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12041d"
+            android:name="com.didi.map.setting.sdk.driver.MapDriverQuickSettingWindowActivity"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12041d"
+            android:name="com.didi.map.setting.sdk.driver.MapDriverQuickSettingWindowActivityV2"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12027f"
+            android:name="com.didi.map.setting.sdk.HaiTunSettingNavigationActivity"
+            android:screenOrientation="behind"
+            android:configChanges="screenSize|orientation"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12041d"
+            android:name="com.didi.map.setting.sdk.MapSettingRecordLocationActivity"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12041d"
+            android:name="com.didi.map.setting.sdk.sfcnav.SFCThirdNavSelect"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12041d"
+            android:name="com.didi.map.setting.sdk.sfcnav.SFCNavConfirmationActivity"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120134"
+            android:name="com.didi.dimina.container.secondparty.jsmodule.jsbridge.scan.ScanActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12013b"
+            android:name="com.didi.dimina.container.secondparty.jsmodule.jsbridge.photo.JumpPhotoActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120134"
+            android:name="com.didi.dimina.container.secondparty.jsmodule.jsbridge.photo.TakePhotoActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120134"
+            android:name="com.didi.dimina.container.secondparty.Dimina4DiContainerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation"
+            android:windowSoftInputMode="adjustUnspecified"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12013d"
+            android:name="com.didi.dimina.container.secondparty.DiminaTransparentActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12013b"
+            android:name="com.didi.dimina.container.secondparty.permission.bridge.BridgeActivity"
+            android:exported="false"/>
+        <provider
+            android:name="com.didi.dimina.container.secondparty.jsmodule.jsbridge.photo.PhotoFileProvider"
+            android:exported="false"
+            android:authorities="com.sdu.didi.psnger.dimina.file.provider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/fixedName_res_0x7f140007"/>
+        </provider>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12027f"
+            android:name="com.didi.sdk.keyreport.ui.widge.EventDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12027f"
+            android:name="com.didi.sdk.keyreport.ui.widge.SimpleEventDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120145"
+            android:name="com.didi.sdk.keyreport.ui.widge.NewEventDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12027f"
+            android:name="com.didi.sdk.keyreport.ui.widge.LiveViewGalleryActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12027f"
+            android:name="com.didi.sdk.keyreport.ui.widge.LiveViewGalleryActivity2"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:name="com.didi.sdk.keyreport.ui.MapActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:name="com.didi.sdk.keyreport.ui.NewMoreInfoActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:name="com.didi.sdk.keyreport.ui.MoreInfoActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:name="com.didi.sdk.keyreport.ui.historylist.ReportedListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12027f"
+            android:name="com.didi.sdk.keyreport.supply.pic.PicDisplayActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1202c6"
+            android:name="com.didi.sdk.address.city.view.CityActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1202c6"
+            android:name="com.didi.sdk.address.address.view.AddressActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1202c6"
+            android:name="com.didi.sdk.address.address.view.CommonAddressActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan"/>
+        <receiver
+            android:name="com.didi.sdk.apm.CommandReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.didi.sdk.apm.cmd"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.didichuxing.travel.support.ThirdLiveService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="connectedDevice"/>
+        <meta-data
+            android:name="com.hihonor.mcs.client.appid"
+            android:value="104414386"/>
+        <activity
+            android:name="com.didi.dimina.webview.container.FusionWebActivityInternal"
+            android:exported="false"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"/>
+        <activity-alias
+            android:name="com.didi.dimina.webview.FusionWebActivity"
+            android:exported="false"
+            android:targetActivity="com.didi.dimina.webview.container.FusionWebActivityInternal"/>
+        <meta-data
+            android:name="com.tencent.rdm.uuid"
+            android:value="0b2d94a8-cdab-4705-9da2-10833125f570"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120196"
+            android:name="com.didi.unifylogin.entrance.OneLoginActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="behind"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120196"
+            android:name="com.didi.unifylogin.entrance.SetPwdActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120196"
+            android:name="com.didi.unifylogin.entrance.SetPhoneActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120196"
+            android:name="com.didi.unifylogin.entrance.VerifyCodeActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120196"
+            android:name="com.didi.unifylogin.entrance.CancelActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120196"
+            android:name="com.didi.unifylogin.country.CountryListActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120196"
+            android:name="com.didi.unifylogin.entrance.SetEmailActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120196"
+            android:name="com.didi.unifylogin.entrance.RetrievePhoneActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120196"
+            android:name="com.didi.unifylogin.entrance.MultiFactorAuthActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120196"
+            android:name="com.didi.unifylogin.entrance.ThirdPartySetActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120196"
+            android:name="com.didi.unifylogin.entrance.AuthorizeActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <data
+                    android:scheme="dididriver"
+                    android:host="unifylogin"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:name="com.didi.unifylogin.entrance.BizAuthorActivity"/>
+        <activity
+            android:name="com.didi.sdk.app.NimbleMainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|screenSize|uiMode|orientation|keyboardHidden|keyboard|mnc|mcc"
+            android:windowSoftInputMode="adjustPan"/>
+        <meta-data
+            android:name="hotpatch_app_key"
+            android:value="9e6dcba61a2f2a703b3e1cfb30446298"/>
+        <meta-data
+            android:name="hotpatch_host"
+            android:value="https://dynamicmodule.didiglobal.com"/>
+        <activity
+            android:name="com.xiaoju.nova.pospay.PosPayActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <provider
+            android:name="com.didi.onekeyshare.callback.intercept.ShareFileProvider"
+            android:exported="false"
+            android:authorities="com.sdu.didi.psnger.share.provider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/fixedName_res_0x7f140017"/>
+        </provider>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120109"
+            android:name="com.didi.beatles.im.activity.IMPictureSelectorActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="behind"
+            android:configChanges="orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120109"
+            android:name="com.didi.beatles.im.activity.IMPictureGalleryPreviewActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="behind"
+            android:configChanges="orientation|keyboardHidden|keyboard"/>
+        <service
+            android:name="com.didi.beatles.im.common.IMPollingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="im.service.PollingService"/>
+            </intent-filter>
+        </service>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:name="com.didi.beatles.im.access.notify.IMDispatcherActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:configChanges="fontScale|screenSize|uiMode|orientation|keyboardHidden|keyboard|locale|mnc|mcc">
+            <intent-filter>
+                <action android:name="com.didi.im.action.PUSH_DISPATCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <provider
+            android:name="com.didi.beatles.im.picture.IMPictureFileProvider"
+            android:exported="false"
+            android:authorities="com.sdu.didi.psnger.com.didi.beatles.im.fileprovider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/fixedName_res_0x7f14000a"/>
+        </provider>
+        <activity
+            android:name="com.didi.bizsafety.ocr.OcrResultsAct"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            android:name="com.didi.safety.onesdk.business.guide.GuideActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard|touchscreen|locale"
+            android:enableOnBackInvokedCallback="false">
+            <property
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_RESTRICTED_RESIZABILITY"
+                android:value="true"/>
+        </activity>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120464"
+            android:name="com.didi.safety.onesdk.business.guide.GuideActivity.HorizontalGuideActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard|touchscreen|locale"
+            android:enableOnBackInvokedCallback="false">
+            <property
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_RESTRICTED_RESIZABILITY"
+                android:value="true"/>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            android:name="com.didi.safety.onesdk.business.detect.DetectActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard|touchscreen|locale"
+            android:enableOnBackInvokedCallback="false">
+            <property
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_RESTRICTED_RESIZABILITY"
+                android:value="true"/>
+        </activity>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120464"
+            android:name="com.didi.safety.onesdk.business.detect.DetectActivity.HorizontalDetectActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard|touchscreen|locale"
+            android:enableOnBackInvokedCallback="false">
+            <property
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_RESTRICTED_RESIZABILITY"
+                android:value="true"/>
+        </activity>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1203e7"
+            android:name="com.didi.safety.onesdk.business.detect.DetectActivity.TransparentDetectActivity"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard|touchscreen|locale"
+            android:enableOnBackInvokedCallback="false"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1203e7"
+            android:name="com.didi.safety.onesdk.permission.GlobalPermissionActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1203e7"
+            android:name="com.didi.safety.onesdk.permission.AudioPermissionActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <service
+            android:name="com.ddtaxi.common.tracesdk.TraceService"
+            android:persistent="false"
+            android:enabled="true"
+            android:exported="false"/>
+        <activity android:name="com.didi.greatwall.frame.component.progress.ProgressActivity"/>
+        <activity android:name="com.didi.greatwall.frame.component.pre.CardCheckPreActivity"/>
+        <activity
+            android:name="com.didi.greatwall.frame.component.act.GreatWallWebActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation"/>
+        <activity
+            android:name="com.didi.greatwall.frame.component.act.GreatWallNativeActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation"/>
+        <activity android:name="com.didi.webx.view.ErrorActivity"/>
+        <activity
+            android:name="com.didi.thanos.weex.ThanosPageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout"/>
+        <activity android:name="com.xiaojuchefu.fusion.imagepicker.ui.MatisseActivity"/>
+        <activity android:name="com.xiaojuchefu.fusion.imagepicker.internal.ui.AlbumPreviewActivity"/>
+        <activity android:name="com.xiaojuchefu.fusion.imagepicker.internal.ui.SelectedPreviewActivity"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12030d"
+            android:name="com.xiaojuchefu.fusion.video.VideoPlayerActivity"/>
+        <activity
+            android:name="com.didi.one.netdiagnosis.DiagnosisActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.sdu.didi.psnger.network.self.diagnosis"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.didi.one.netdiagnosis.ErrorDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.didi.one.netdiagnosis.DispatcherActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <data android:scheme="didinet"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <service
+            android:name="com.didi.aoe.sercive.AoeProcessService"
+            android:exported="false"
+            android:process=":aoeProcessor"/>
+        <service
+            android:name="com.didichuxing.dfbasesdk.crash.UploadService"
+            android:process="com.didichuxing.uploadservice"/>
+        <activity
+            android:name="com.didichuxing.dfbasesdk.webview.DFWebviewAct"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data
+                    android:scheme="diface"
+                    android:host="viewwebpage"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data
+                    android:scheme="dfglobal"
+                    android:host="viewwebpage"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.didichuxing.dfbasesdk.webview.DFBaseWebViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.didichuxing.dfbasesdk.act.DFPermissionActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1203e7"
+            android:name="com.didichuxing.dfbasesdk.view.ProgressbarActivity"
+            android:launchMode="singleTask"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1203e7"
+            android:name="com.didichuxing.dfbasesdk.utils.DfLoading"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1203e7"
+            android:name="com.didichuxing.dfbasesdk.utils.DiSafetyLoading.DfLoadingActivity"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1203e7"
+            android:name="com.didichuxing.dfbasesdk.camera2.CameraPermissionAct2"
+            android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12041e"
+            android:name="com.didichuxing.dfbasesdk.act.DialogActivity"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12043a"
+            android:name="com.didichuxing.security.hmverify.slider.HMSliderVerifyAct"/>
+        <provider
+            android:name="com.didichuxing.tools.loader.FaceoffInitProvider"
+            android:exported="false"
+            android:multiprocess="true"
+            android:authorities="com.sdu.didi.psnger.faceoff-init"
+            android:initOrder="9"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120307"
+            android:name="com.didichuxing.unifybridge.core.permission.bridge.BridgeActivity"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120307"
+            android:name="com.didichuxing.unifybridge.core.module.sub.image.ChooseImageActivity"
+            android:launchMode="singleTop"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12001a"
+            android:name="com.didichuxing.unifybridge.core.module.sub.image.ChooseMediaActivity"
+            android:launchMode="singleTop"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12001a"
+            android:name="com.didichuxing.unifybridge.core.module.sub.RequestPermissionActivity"
+            android:launchMode="singleTop"/>
+        <provider
+            android:name="com.didichuxing.unifybridge.core.provider.UniBridgeFileProvider"
+            android:exported="false"
+            android:authorities="com.sdu.didi.psnger.unifyjs.file.provider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/fixedName_res_0x7f14001d"/>
+        </provider>
+        <provider
+            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
+            android:exported="false"
+            android:authorities="com.sdu.didi.psnger.fileprovider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/fixedName_res_0x7f140008"/>
+        </provider>
+        <service
+            android:name="com.didiglobal.audiokit.common.service.AudioKitService"
+            android:exported="false"
+            android:foregroundServiceType="microphone|mediaPlayback"/>
+        <activity
+            android:name="com.didi.onefloat.fusion.BaseFloatWebActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12027f"
+            android:name="com.didi.sdk.map.web.components.MapWebActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12027f"
+            android:name="com.didi.sdk.map.web.components.MapThemeWebActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale|mnc|mcc"/>
+        <activity
+            android:name="com.didi.onehybrid.devmode.FusionDebugActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.didi.onehybrid.container.FusionWebActivityInternal"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.didi.onehybrid.devmode.DevHomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.didi.onehybrid.devmode.DevRenderInfoActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.didi.onehybrid.devmode.DevBridgeInfoActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.didi.onehybrid.devmode.OfflineDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.didi.onehybrid.devmode.CacheDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.didi.onehybrid.devmode.DevBridgeDetailActivity"
+            android:exported="false"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.didi.onehybrid.devmode.TotalOfflineActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <provider
+            android:name="com.didichuxing.omega.sdk.common.perforence.ConfigProvider"
+            android:exported="false"
+            android:authorities="com.sdu.didi.psnger.omegaconfigprovider"/>
+        <activity android:name="com.didi.payment.base.view.webview.PayFusionWebActivity"/>
+        <provider
+            android:name="com.didi.quicksilver.QuicksilverInitProvider"
+            android:exported="false"
+            android:authorities="com.sdu.didi.psnger.QuicksilverInitProvider"/>
+        <provider
+            android:name="com.didichuxing.upgrade.common.UpgradeFileProvider"
+            android:exported="false"
+            android:authorities="com.sdu.didi.psnger.mas.upgrade.fileProvider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/fixedName_res_0x7f14000e"/>
+        </provider>
+        <meta-data
+            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+            android:value="GlideModule"/>
+        <activity
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:name="com.didi.payment.mpgs.Gateway3DSecureActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|navigation|keyboardHidden"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12012a"
+            android:name="com.usdk.android.ChallengeActivity"
+            android:launchMode="singleTask"
+            android:configChanges="screenSize|orientation"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12030b"
+            android:name="com.usdk.android.AuthActivity"
+            android:configChanges="screenSize|orientation"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible"/>
+        <activity
+            android:name="com.didi.casper.core.activity.CACasperActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12001e"
+            android:name="com.didi.hummer.HummerActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f12001e"
+            android:name="com.didi.hummer.delegate.HummerDelegateActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120002"
+            android:name="com.didi.hummer.utils.blankj.UtilsTransActivity"
+            android:multiprocess="true"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120133"
+            android:name="com.wujie.dimina.bridge.plugin.dd.contact.DiminaDDContactBridgeSheetActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120133"
+            android:name="com.didi.dimina.container.ui.dialog.DiminaBridgeSheetActivity"
+            android:exported="false"/>
+        <service
+            android:name="com.didi.sdk.push.ui.PushStateDisplayService"
+            android:exported="false"/>
+        <activity
+            android:name="com.didi.sdk.push.ui.LogPrinterActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.didi.sdk.push.ui.CheckStateActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.sdu.didi.psnger.com.didi.sdk.push.ui.check"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.didi.sdk.push.proxy.DispatcherActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <data android:scheme="didipush"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <provider
+            android:name="com.didichuxing.mas.sdk.quality.report.perforence.ConfigProvider"
+            android:exported="false"
+            android:authorities="com.sdu.didi.psnger.configprovider"/>
+        <meta-data
+            android:name="com.bumptech.glide.integration.webp.WebpGlideModule"
+            android:value="GlideModule"/>
+        <uses-library
+            android:name="androidx.camera.extensions.impl"
+            android:required="false"/>
+        <service
+            android:name="androidx.camera.core.impl.MetadataHolderService"
+            android:enabled="false"
+            android:exported="false">
+            <meta-data
+                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider"/>
+        </service>
+        <activity
+            android:theme="@android:style/Theme.Holo.Light"
+            android:label="@string/fixedName_res_0x7f1109d5"
+            android:icon="@drawable/fixedName_res_0x7f081a5a"
+            android:name="com.didichuxing.swarm.launcher.BundleListActivity"/>
+        <activity
+            android:theme="@android:style/Theme.Holo.Light"
+            android:label="@string/fixedName_res_0x7f1109d4"
+            android:icon="@drawable/fixedName_res_0x7f081a5a"
+            android:name="com.didichuxing.swarm.launcher.BundleActivity"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/fixedName_res_0x7f0a0014"/>
+        <provider
+            android:name="com.didi.tools.ultron.loader.InitProvider"
+            android:exported="false"
+            android:multiprocess="true"
+            android:authorities="com.sdu.didi.psnger.ultron-init"
+            android:initOrder="9"/>
+        <service
+            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+            android:enabled="@bool/fixedName_res_0x7f050004"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <service
+            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="@bool/fixedName_res_0x7f050006"
+            android:exported="true"
+            android:directBootAware="false"/>
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:enabled="@bool/fixedName_res_0x7f050005"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <receiver
+            android:name="androidx.work.impl.utils.ForceStopRunnable.BroadcastReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.BatteryChargingProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.BatteryNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.StorageNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.NetworkStateProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+            android:enabled="@bool/fixedName_res_0x7f050004"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="com.sdu.didi.psnger.androidx-startup">
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup"/>
+        </provider>
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false"
+            android:directBootAware="true"/>
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+        <meta-data
+            android:name="sdk_version_vivo"
+            android:value="506"/>
+        <meta-data
+            android:name="local_iv"
+            android:value="MzMsMzQsMzUsMzYsMzcsMzgsMzksNDAsNDEsMzIsMzgsMzcsMzYsMzUsMzQsMzMsI0AzNCwzMiwzMywzNywzMywzNCwzMiwzMywzMywzMywzNCw0MSwzNSwzNSwzMiwzMiwjQDMzLDM0LDM1LDM2LDM3LDM4LDM5LDQwLDQxLDMyLDM4LDM3LDMzLDM1LDM0LDMzLCNAMzQsMzIsMzMsMzcsMzMsMzQsMzIsMzMsMzMsMzMsMzQsNDEsMzUsMzIsMzIsMzI"/>
+        <meta-data
+            android:name="com.vivo.push.support_monitor"
+            android:value="1"/>
+        <meta-data
+            android:name="sdkVersion"
+            android:value="3100"/>
+        <meta-data
+            android:name="com.google.ar.core.min_apk_version"
+            android:value="190412000"/>
+        <activity
+            android:theme="@android:style/Theme.Material.Light.Dialog.Alert"
+            android:name="com.google.ar.core.InstallActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTop"
+            android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <meta-data
+            android:name="com.huawei.hms.client.service.name:arenginesdk"
+            android:value="arenginesdk:4.0.0.5"/>
+        <activity
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            android:name="com.didi.security.diface.protocol.SignFaceAgreementAct"
+            android:screenOrientation="portrait"
+            android:enableOnBackInvokedCallback="false">
+            <property
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_RESTRICTED_RESIZABILITY"
+                android:value="true"/>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            android:name="com.didi.security.diface.appeal.activity.AppealSubmitAct"
+            android:screenOrientation="portrait">
+            <property
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_RESTRICTED_RESIZABILITY"
+                android:value="true"/>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            android:name="com.didi.security.diface.appeal.activity.AppealEidSubmitAct"
+            android:screenOrientation="portrait">
+            <property
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_RESTRICTED_RESIZABILITY"
+                android:value="true"/>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            android:name="com.didi.security.diface.appeal.activity.TakePhotoAct"
+            android:exported="false">
+            <property
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_RESTRICTED_RESIZABILITY"
+                android:value="true"/>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data
+                    android:scheme="onesdkh5invoke"
+                    android:host="takephoto"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            android:name="com.didi.security.diface.appeal.activity.AppealResultAct"
+            android:screenOrientation="portrait"
+            android:enableOnBackInvokedCallback="false">
+            <property
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_RESTRICTED_RESIZABILITY"
+                android:value="true"/>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            android:name="com.didi.security.diface.FppLandingActV5"
+            android:screenOrientation="portrait"
+            android:enableOnBackInvokedCallback="false">
+            <property
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_RESTRICTED_RESIZABILITY"
+                android:value="true"/>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            android:name="com.didi.security.diface.h5face.H5FaceContainer"
+            android:screenOrientation="portrait"
+            android:enableOnBackInvokedCallback="false">
+            <property
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_RESTRICTED_RESIZABILITY"
+                android:value="true"/>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            android:name="com.didi.security.diface.appeal.eid.FaceNfcGuideActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard|touchscreen|locale"
+            android:enableOnBackInvokedCallback="false">
+            <property
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_RESTRICTED_RESIZABILITY"
+                android:value="true"/>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            android:name="com.didi.security.diface.appeal.eid.FaceNfcDetectActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard|touchscreen|locale"
+            android:enableOnBackInvokedCallback="false">
+            <property
+                android:name="android.window.PROPERTY_COMPAT_ALLOW_RESTRICTED_RESIZABILITY"
+                android:value="true"/>
+        </activity>
+        <uses-library
+            android:name="org.simalliance.openmobileapi"
+            android:required="false"/>
+        <activity
+            android:name="com.unionpay.UPPayWapActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f120493"
+            android:name="com.iap.cashier.core.PaymentSheetActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <service
+            android:name="com.alibaba.android.bindingx.plugin.weex.WXBindingXModuleService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="bindingx"/>
+                <action android:name="binding"/>
+                <action android:name="expressionBinding"/>
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.didichuxing.upgrade.NON_GOOGLE_PLAY"
+            android:value="true"/>
+        <meta-data
+            android:name="com.huawei.wearengine.sdk.api_level"
+            android:value="11"/>
+        <activity
+            android:theme="@android:style/Theme.Light.Panel"
+            android:name="com.huawei.wearengine.ClientHubActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:configChanges="fontScale|uiMode"/>
+        <receiver
+            android:name="com.huawei.hms.support.api.push.PushMsgReceiver"
+            android:permission="com.sdu.didi.psnger.permission.PROCESS_PUSH_MSG"
+            android:exported="true"
+            android:directBootAware="true">
+            <intent-filter>
+                <action android:name="com.huawei.intent.action.PUSH_DELAY_NOTIFY"/>
+                <action android:name="com.huawei.intent.action.PUSH"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.huawei.hms.support.api.push.PushReceiver"
+            android:permission="com.sdu.didi.psnger.permission.PROCESS_PUSH_MSG"
+            android:exported="true"
+            android:directBootAware="true">
+            <intent-filter>
+                <action android:name="com.huawei.android.push.intent.REGISTRATION"/>
+                <action android:name="com.huawei.android.push.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.huawei.hms.support.api.push.service.HmsMsgService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":pushservice"
+            android:directBootAware="true">
+            <intent-filter>
+                <action android:name="com.huawei.push.msg.NOTIFY_MSG"/>
+                <action android:name="com.huawei.push.msg.PASSBY_MSG"/>
+            </intent-filter>
+        </service>
+        <provider
+            android:name="com.huawei.hms.support.api.push.PushProvider"
+            android:readPermission="com.sdu.didi.psnger.permission.PUSH_PROVIDER"
+            android:writePermission="com.sdu.didi.psnger.permission.PUSH_WRITE_PROVIDER"
+            android:exported="true"
+            android:authorities="com.sdu.didi.psnger.huawei.push.provider"/>
+        <meta-data
+            android:name="com.huawei.hms.client.service.name:push"
+            android:value="push:6.7.0.300"/>
+        <meta-data
+            android:name="com.huawei.hms.min_api_level:push:push"
+            android:value="1"/>
+        <activity
+            android:name="com.huawei.hms.support.api.push.TransActivity"
+            android:exported="false"/>
+        <meta-data
+            android:name="com.huawei.hms.client.service.name:opendevice"
+            android:value="opendevice:6.7.0.300"/>
+        <meta-data
+            android:name="com.huawei.hms.min_api_level:opendevice:push"
+            android:value="1"/>
+        <meta-data
+            android:name="com.huawei.hms.client.service.name:base"
+            android:value="base:6.6.0.300"/>
+        <meta-data
+            android:name="com.huawei.hms.min_api_level:base:hmscore"
+            android:value="1"/>
+        <meta-data
+            android:name="availableLoaded"
+            android:value="yes"/>
+        <service
+            android:name="com.huawei.agconnect.core.ServiceDiscovery"
+            android:exported="false"/>
+        <activity android:name="com.didi.soda.crash.drill.DrillActivity"/>
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false"/>
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false"/>
+        <meta-data
+            android:name="com.facebook.soloader.enabled"
+            android:value="false"/>
+        <meta-data
+            android:name="com.hihonor.intelligence.suggestion-kit.enableFlag"
+            android:value="true"/>
+        <activity
+            android:name="com.face.csg.lv5.sdk.loading.LoadingActivity"
+            android:screenOrientation="behind"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:hardwareAccelerated="true"/>
+        <activity
+            android:name="com.face.csg.lv5.sdk.detect.action.ActionLivenessActivity"
+            android:screenOrientation="behind"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden"
+            android:hardwareAccelerated="true"/>
+        <activity
+            android:name="com.face.csg.lv5.sdk.detect.color.FlashLivenessActivity"
+            android:screenOrientation="behind"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden"
+            android:hardwareAccelerated="true"/>
+        <activity
+            android:name="com.face.csg.lv5.sdk.detect.color.CircleFlashLivenessActivity"
+            android:screenOrientation="behind"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden"
+            android:hardwareAccelerated="true"/>
+        <activity
+            android:name="com.face.csg.lv5.sdk.detect.actionflash.ActionFlashLivenessActivity"
+            android:screenOrientation="behind"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden"
+            android:hardwareAccelerated="true"/>
+        <activity
+            android:name="com.face.csg.lv5.sdk.detect.distance.DistanceFlashFaceLivenessDetectActivity"
+            android:screenOrientation="behind"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden"
+            android:hardwareAccelerated="true"/>
+        <activity
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:name="com.face.csg.lv5.sdk.detect.guide.GrantActivity"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden"/>
+        <activity
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:name="com.face.csg.lv5.sdk.detect.guide.UserAgreementActivity"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden"/>
+        <activity
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:name="com.face.csg.lv5.nfc.guild.NFCDetectActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:exported="false"
+            android:configChanges="fontScale|layoutDirection|density|smallestScreenSize|screenSize|screenLayout|orientation|navigation|keyboardHidden|keyboard|locale"/>
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:exported="false"
+            android:configChanges="fontScale|layoutDirection|density|smallestScreenSize|screenSize|screenLayout|orientation|navigation|keyboardHidden|keyboard|locale"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.alipay.sdk.app.PayResultActivity"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:configChanges="fontScale|layoutDirection|density|smallestScreenSize|screenSize|screenLayout|orientation|navigation|keyboardHidden|keyboard|locale"/>
+        <activity
+            android:name="com.alipay.sdk.app.H5OpenAuthActivity"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:configChanges="fontScale|layoutDirection|density|smallestScreenSize|screenSize|screenLayout|orientation|navigation|keyboardHidden|keyboard|locale"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.alipay.sdk.app.APayEntranceActivity"
+            android:exported="false"
+            android:configChanges="fontScale|layoutDirection|density|smallestScreenSize|screenSize|screenLayout|orientation|navigation|keyboardHidden|keyboard|locale"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.bun.miitmdid.utilsforrequestpermission.PermissionTransparentActivity"/>
+        <meta-data
+            android:name="com.huawei.hms.client.service.name:ads-identifier"
+            android:value="ads-identifier:3.4.62.300"/>
+        <meta-data
+            android:name="MIPUSH_SDK_VERSION_CODE"
+            android:value="50909"/>
+        <meta-data
+            android:name="MIPUSH_SDK_VERSION_NAME"
+            android:value="5_9_9-C"/>
+        <service
+            android:name="com.xiaomi.mipush.sdk.PushMessageHandler"
+            android:permission="com.xiaomi.xmsf.permission.MIPUSH_RECEIVE"
+            android:enabled="true"
+            android:exported="true"/>
+        <service
+            android:name="com.xiaomi.mipush.sdk.MessageHandleService"
+            android:enabled="true"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.xiaomi.mipush.sdk.NotificationClickedActivity"
+            android:enabled="true"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance">
+            <meta-data
+                android:name="supportStyle"
+                android:value="scene|voip"/>
+        </activity>
+        <meta-data
+            android:name="com.hihonor.push.sdk_version"
+            android:value="7.0.61.303"/>
+        <activity
+            android:name="com.shmetro.library.bom.BomActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.shmetro.library.bom.BomInActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.shmetro.library.bom.BomOutActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.shmetro.library.bom.InStationOverTimeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/fixedName_res_0x7f1200fd"
+            android:name="com.huawei.hms.activity.BridgeActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:screenOrientation="behind"
+            android:configChanges="fontScale|layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|locale"
+            android:hardwareAccelerated="true">
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent"/>
+        </activity>
+        <activity
+            android:name="com.huawei.hms.activity.EnableServiceActivity"
+            android:exported="false"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden"/>
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="appid=100200867"/>
+        <meta-data
+            android:name="com.hihonor.mcs.client.appid"
+            android:value="104414386"/>
+        <meta-data
+            android:name="com.hihonor.mcs.client.developerid"
+            android:value="developerid=109999818349"/>
+    </application>
+</manifest>
